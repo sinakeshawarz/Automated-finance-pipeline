@@ -6,7 +6,7 @@
       "provenance": [],
       "machine_shape": "hm",
       "authorship_tag": "ABX9TyP1anrLtDDW+qCSi2NIpwg+",
-      "include_colab_link": true
+      "include_colab_link": True
     },
     "kernelspec": {
       "name": "python3",
