@@ -4,9 +4,10 @@
     git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
 - name: Commit and Push changes
+  env:
+    PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
   run: |
     git add .
     git commit -m "Automated update" || echo "No changes to commit"
+    git remote set-url origin https://x-access-token:${PAT_TOKEN}@github.com/${{ github.repository }}.git
     git push origin HEAD:${GITHUB_REF#refs/heads/}
-  env:
-    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
